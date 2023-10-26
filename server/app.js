@@ -37,4 +37,9 @@ app.use(function(err, req, res, next) {
   })
 })
 
+// Define your API endpoints
+app.get('/api/employees/:empId', (req, res) => {
+  // Implement logic to find an employee by empId and send the response.
+});
+
 module.exports = app // export the Express application

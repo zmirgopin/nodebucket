@@ -1,0 +1,17 @@
+<!-- input fr number and submit button-->
+<form (submit)="doSignin($event)">
+  <legend>Signin</legend>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput [formControl]="employeeIdFormControl" placeholder="Ex. pat@example.com">
+    <mat-hint>Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="employeeIdFormControl.hasError('pattern') && !employeeIdFormControl.hasError('required')">
+      Please enter a employee id
+    </mat-error>
+    <mat-error *ngIf="employeeIdFormControl.hasError('required')">
+      Employee id is<strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <button mat-button type="submit">signin</button>
+</form>
