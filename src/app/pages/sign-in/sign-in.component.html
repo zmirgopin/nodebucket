@@ -1,17 +1,20 @@
-<!-- input fr number and submit button-->
-<form (submit)="doSignin($event)">
-  <legend>Signin</legend>
+<div class="signin-page w-100 h-100 p-3">
+  <!-- input fr number and submit button-->
+  <form (submit)="doSignin($event)" [formGroup]="form" class="w-100">
+    <legend>Signin</legend>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Email</mat-label>
-    <input type="email" matInput [formControl]="employeeIdFormControl" placeholder="Ex. pat@example.com">
-    <mat-hint>Errors appear instantly!</mat-hint>
-    <mat-error *ngIf="employeeIdFormControl.hasError('pattern') && !employeeIdFormControl.hasError('required')">
-      Please enter a employee id
-    </mat-error>
-    <mat-error *ngIf="employeeIdFormControl.hasError('required')">
-      Employee id is<strong>required</strong>
-    </mat-error>
-  </mat-form-field>
-  <button mat-button type="submit">signin</button>
-</form>
+    <mat-form-field class="example-full-width">
+
+      <mat-label>Email</mat-label>
+      <input name="employeeId" type="email" matInput formControlName="employeeId" placeholder="Ex. pat@example.com">
+
+      <mat-error *ngIf="form?.get('employeeId')?.hasError('required')">
+        Employee id is<strong>required</strong>
+      </mat-error>
+
+      <mat-error *ngIf="form?.get('employeeId')?.hasError('employeeIdInvalid')">
+        Please enter a valid employeeid between 1007 and 1012 </mat-error>
+    </mat-form-field>
+    <button mat-button type="submit">signin</button>
+  </form>
+</div>

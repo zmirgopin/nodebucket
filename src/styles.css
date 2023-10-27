@@ -1,4 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-base-layout {
+  height: 100%;
+  display: block;
+}
+
+app-nav {
+  height: 60px;
+}
+
+main {
+  height: calc(100% - 60px);
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* positions */
+.pos-relative {
+  position: relative;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+.pos-static {
+  position: static;
+}
+
+/* debug outline to see invisible bounds */
+.d-outline {
+  outline: 3px solid blue;
+}
+
+.small-box {
+  /* height: 200px; */
+}
+
+.large-box {
+  /* height: 300px; */
+}

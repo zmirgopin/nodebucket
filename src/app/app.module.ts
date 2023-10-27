@@ -15,9 +15,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 
-import {
-  ReactiveFormsModule
-} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +28,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -58,6 +57,7 @@ import { TasksComponent } from './pages/tasks/tasks.component';
     MatInputModule,
     ReactiveFormsModule,
     NgIf,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

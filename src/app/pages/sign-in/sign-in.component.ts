@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 /**
  * A Sign In page for nonauthenticated employees.
 Design a sign in page that is consistent with
@@ -12,6 +17,13 @@ range of 1007-1012. All other entries must
 be rejected. Include the appropriate error
 messages.
  */
+function employeeIdValidator(control: FormControl) {
+  const value = control.value;
+  if (value >= 1007 && value <= 1012) {
+    return { employeeIdValidator: false }; // Valid
+  }
+  return { employeeIdInvalid: true }; // Invalid
+}
 
 @Component({
   selector: 'app-sign-in',
@@ -19,12 +31,20 @@ messages.
   styleUrls: ['./sign-in.component.css'],
 })
 export class SignInComponent {
-  employeeIdFormControl = new FormControl('', [
-    Validators.required,
-    Validators.pattern('d{4}'),
-  ]);
+  form!: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    // employeeIdFormControl = new FormControl('', [
+    //   Validators.required,
+    //   employeeIdValidator,
+    // ]);
+    this.form = this.fb.group({
+      employeeId: ['', [Validators.required, employeeIdValidator]],
+    });
+  }
 
   doSignin($event: SubmitEvent) {
-    console.log('form submitted', { $event });
+    const { employeeId } = this.form.value;
+    console.log('form submitted', { $event, employeeId });
   }
 }
