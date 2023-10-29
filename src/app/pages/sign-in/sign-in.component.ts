@@ -1,3 +1,8 @@
+/**
+ * Title: sign-in.component.ts
+ * Author: Zahava Gopin
+ * Date: 10/29/23
+ */
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';

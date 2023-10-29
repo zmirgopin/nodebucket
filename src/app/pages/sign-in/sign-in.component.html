@@ -1,20 +1,21 @@
 <div class="signin-page w-100 h-100 p-3">
+
   <!-- input fr number and submit button-->
-  <form (submit)="doSignin($event)" [formGroup]="form" class="w-100">
-    <legend>Signin</legend>
+  <form (submit)="doSignin($event)" [formGroup]="form" class="hi w-200">
+    <legend>Please sign in to view your tasks</legend>
 
     <mat-form-field class="example-full-width">
 
-      <mat-label>Email</mat-label>
-      <input name="employeeId" type="email" matInput formControlName="employeeId" placeholder="Ex. pat@example.com">
+      <mat-label>Employee ID</mat-label>
+      <input name="employeeId" type="email" matInput formControlName="employeeId" placeholder="#####">
 
       <mat-error *ngIf="form?.get('employeeId')?.hasError('required')">
-        Employee id is<strong>required</strong>
+      <br /> Employee ID is <strong> required.</strong>
       </mat-error>
 
       <mat-error *ngIf="form?.get('employeeId')?.hasError('employeeIdInvalid')">
-        Please enter a valid employeeid between 1007 and 1012 </mat-error>
+       <br />  Please enter a valid employee ID.  </mat-error>
     </mat-form-field>
-    <button mat-button type="submit">signin</button>
+    <button mat-button type="submit" class="signInButton">Sign In</button>
   </form>
 </div>

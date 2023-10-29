@@ -1,3 +1,8 @@
+/**
+ * Title: auth-guard.gaurd.ts
+ * Author: Zahava Gopin
+ * Date: 10/29/23
+ */
 import { CookieService } from 'ngx-cookie-service';
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';

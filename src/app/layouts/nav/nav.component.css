@@ -1,0 +1,20 @@
+.one{
+  background-color: #ecb939;
+}
+.two{
+  background-color: #ecb939;
+}
+.three{
+  background-color: #ecb939;
+}
+.four{
+  background-color: #ecb939;
+}
+.five{
+  background-color: #ecb939;
+}
+#img{
+  width: 24px; /* Set the same width as your navigation buttons */
+  height: 24px; /* Set the same height as your navigation buttons */
+  margin-left: auto;
+}

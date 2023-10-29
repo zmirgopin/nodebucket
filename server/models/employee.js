@@ -1,3 +1,10 @@
+/**
+ * Title: employee.js
+ * Author: Zahava Gopin
+ * Date: 10/28/23
+ * Description: employee model
+ */
+
 const mongoose = require('mongoose');
 
 const employeeSchema = new mongoose.Schema({

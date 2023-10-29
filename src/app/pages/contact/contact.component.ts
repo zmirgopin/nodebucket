@@ -1,3 +1,8 @@
+/**
+ * Title: contact.component.ts
+ * Author: Zahava Gopin
+ * Date: 10/29/23
+ */
 import { Component } from '@angular/core';
 
 @Component({

@@ -1,4 +1,10 @@
-//setup connection to mongodb
+/**
+ * Title: connection.js
+ * Author: Zahava Gopin
+ * Date: 10/28/23
+ * Description: setup connection to mongodb
+ */
+
 const mongoose = require('mongoose');
 
 const connection_url = `mongodb+srv://nodebucket_admin:Zee03rox@bellevueuniversity.r06aetm.mongodb.net/nodebucketDB?retryWrites=true&w=majority`
