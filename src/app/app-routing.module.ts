@@ -13,6 +13,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
+import { authGuardGuard } from './auth-guard.guard';
 
 // routes array with a path, component, and title for each route in the application (e.g. home, about, contact, etc.)
 const routes: Routes = [
@@ -38,6 +39,7 @@ const routes: Routes = [
       },
       {
         path: 'contact',
+        canActivate: [authGuardGuard],
         component: ContactComponent,
         title: 'Nodebucket: About',
       },
@@ -48,6 +50,7 @@ const routes: Routes = [
       },
       {
         path: 'tasks',
+        canActivate: [authGuardGuard],
         component: TasksComponent,
         title: 'Nodebucket: About',
       },

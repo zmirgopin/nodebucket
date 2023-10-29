@@ -12,7 +12,7 @@ async function seedDatabase() {
   for (let i = 0; i <= 5; i++) {
     const employee = new Employee({
       name: `Employee ${i + 1}`,
-      employeeId: 1007 + i
+      empId: 1007 + i
     });
 
     await employee.save();

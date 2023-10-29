@@ -29,6 +29,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CookieService } from 'ngx-cookie-service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -58,8 +60,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     NgIf,
     FlexLayoutModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
