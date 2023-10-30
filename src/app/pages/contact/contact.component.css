@@ -1,0 +1,42 @@
+.contact-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image img {
+  max-width: 100%;
+}
+
+.contact-info {
+  flex: 1;
+  margin-top: 180px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 48px;
+  line-height: 100%;
+}
+
+img {
+  margin-right: 10px;
+}
+.right{
+  padding-top: 100px;
+}
+
+.feedback-text {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  font-size: 120px;
+  color: #726255;
+}

@@ -1,12 +1,19 @@
 .small-box {
-  font-size: 74px; /* Adjust the font size as needed */
-  color: #372e29;
+  font-size: 100px; /* Adjust the font size as needed */
+  color: #ecb939;
   line-height: 100%;
 }
 
 .large-box{
-  color: #726255;
-  font-size: 36px;
+  color: #f0c75e;
+  font-size: 48px;
   line-height: 100%;
+}
+
+.background-image {
+  background-image: url('/assets/people.jpg');
+  background-size: cover; /* Adjust as needed */
+  background-position: center center; /* Adjust as needed */
+  background-repeat: no-repeat;
 }
 

@@ -39,20 +39,19 @@ const routes: Routes = [
       },
       {
         path: 'contact',
-        canActivate: [authGuardGuard],
         component: ContactComponent,
-        title: 'Nodebucket: About',
+        title: 'Nodebucket: Contact',
       },
       {
         path: 'signin',
         component: SignInComponent,
-        title: 'Nodebucket: About',
+        title: 'Nodebucket: Sign-in',
       },
       {
         path: 'tasks',
         canActivate: [authGuardGuard],
         component: TasksComponent,
-        title: 'Nodebucket: About',
+        title: 'Nodebucket: Tasks',
       },
     ],
   },
