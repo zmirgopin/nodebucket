@@ -1,27 +1,31 @@
 <div class="signin-page" style="background-image: url('/assets/background.png');">
-<div class="signin-page w-100 h-100 p-3">
+  <div class="signin-page w-100 h-100 p-3">
 
-  <!-- input fr number and submit button-->
-  <form style="padding-left: 15%; background-color: #f0c75e;" (submit)="doSignin($event)" [formGroup]="form" class="hi w-200">
-    <legend style="font-size: 100px; line-height: 100%; color: #726255;;">Plan to succeed, organize to achieve.</legend>
-    <p style="font-size: 24px;">If you are a new user, create your account <a style="text-decoration: underline;">here</a>.</p>
-    <mat-form-field class="example-full-width">
+    <!-- input fr number and submit button-->
+    <form style="padding-left: 15%; background-color: #f0c75e;" (submit)="doSignin($event)" [formGroup]="form"
+      class="hi w-200">
+      <legend style="font-size: 100px; line-height: 100%; color: #726255;;">Plan to succeed, organize to achieve.
+      </legend>
+      <p style="font-size: 24px;">If you are a new user, create your account <a
+          style="text-decoration: underline;">here</a>.</p>
+      <mat-form-field class="example-full-width">
 
 
-      <mat-label >Employee ID</mat-label>
-      <input style="font-size: 36px;" name="employeeId" type="email" matInput formControlName="employeeId" placeholder="#####">
+        <mat-label>Employee ID</mat-label>
+        <input style="font-size: 36px;" name="employeeId" type="email" matInput formControlName="employeeId"
+          placeholder="#####">
 
-      <mat-error *ngIf="form?.get('employeeId')?.hasError('required')">
-      <br /> Employee ID is <strong> required.</strong>
-      </mat-error>
+        <mat-error *ngIf="form?.get('employeeId')?.hasError('required')">
+          <br /> Employee ID is <strong> required.</strong>
+        </mat-error>
 
-      <mat-error *ngIf="form?.get('employeeId')?.hasError('employeeIdInvalid')">
-       <br />  Please enter a valid employee ID.  </mat-error>
-    </mat-form-field>
-    <button style="font-size: 64px; color: white;" mat-button type="submit" class="signInButton">Sign In</button>
-    <br />
+        <mat-error *ngIf="form?.get('employeeId')?.hasError('employeeIdInvalid')">
+          <br /> Please enter a valid employee ID. </mat-error>
+      </mat-form-field>
+      <button style="font-size: 64px; color: white;" mat-button type="submit" class="signInButton">Sign In</button>
+      <br />
 
-  </form>
-</div>
+    </form>
+  </div>
 
 </div>

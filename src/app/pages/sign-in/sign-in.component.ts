@@ -13,6 +13,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ErrorService } from 'src/app/error.service';
 /**
  * A Sign In page for nonauthenticated employees.
 Design a sign in page that is consistent with
@@ -33,9 +35,14 @@ function employeeIdValidator(control: FormControl) {
   return { employeeIdInvalid: true }; // Invalid
 }
 
-function attachBaseUrl(url: string) {
+export function attachBaseUrl(url: string) {
   const base = '/';
   return base + url.replace(/^\//, '');
+}
+
+export enum COOKIE_KEYS {
+  NAME = 'name',
+  EMP_ID = 'empId',
 }
 
 export interface IEmployee {
@@ -58,7 +65,8 @@ export class SignInComponent {
     private fb: FormBuilder,
     private http: HttpClient,
     private cookieService: CookieService,
-    private router: Router
+    private router: Router,
+    private errorService: ErrorService
   ) {
     // employeeIdFormControl = new FormControl('', [
     //   Validators.required,
@@ -75,15 +83,13 @@ export class SignInComponent {
       .subscribe({
         next: (res) => {
           //get employee information and set the cookie
-          this.cookieService.set('name', res.name);
-          this.cookieService.set('empId', '' + res.empId);
+          this.cookieService.set(COOKIE_KEYS.NAME, res.name);
+          this.cookieService.set(COOKIE_KEYS.EMP_ID, '' + res.empId);
           console.log('loging successfull');
           //navigate to task page
           this.router.navigate(['/tasks']);
         },
-        error: (error) => {
-          console.error(error);
-        },
+        error: this.errorService.handleError,
       });
     // .unsubscribe();
   }

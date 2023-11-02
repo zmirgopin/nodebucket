@@ -24,7 +24,7 @@ async function seedDatabase() {
 
     for (let j = 1; j <= 5; j++) {
       const task = new Task({
-        description: `Task ${j} for Employee ${i}`,
+        description: `Task ${j} for Employee ${employee.empId}`,
         employee: employee._id,
       });
 

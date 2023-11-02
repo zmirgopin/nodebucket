@@ -7,7 +7,14 @@
 const mongoose = require('mongoose');
 
 const taskSchema = new mongoose.Schema({
-  description: String,
+  description: {
+    type: mongoose.Schema.Types.String,
+    required: true
+  },
+  done: {
+    type: mongoose.Schema.Types.Boolean,
+    default: false,
+  },
   employee: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Employee',

@@ -1,1 +1,58 @@
-<p>tasks works!</p>
+<div fxLayout="column" class="p-5">
+
+  <form class="addForm" fxFlex="100" (submit)="addTask(form.value)" [formGroup]="form" fxLayou="column">
+
+    <legend>Add new Todo task</legend>
+
+    <mat-form-field>
+      <mat-label>Todo description</mat-label>
+      <input matInput type="text" required placeholder="" formControlName="description">
+    </mat-form-field>
+    <button mat-button type="submit">add Todo</button>
+  </form>
+
+  <div fxLayout="row">
+
+    <mat-list dense fxFlex="50">
+      <h3 mat-subheader>
+        <span>Todos List </span><button mat-icon-button (click)="refresh()">
+          <mat-icon class="mat-18">refresh</mat-icon>
+        </button>
+      </h3>
+
+      <mat-list-item *ngFor="let task of todosList" ngClass="{'strike-through':task.done}">
+        <div fxLayout="row">
+          <span class="me-auto">{{task.description}}</span>
+          <div>
+            <button mat-fab (click)="deleteTask(task)" color="primary">
+              <mat-icon class="mat-18">delete</mat-icon>
+            </button>
+            <button mat-fab (click)="editTask(task)" color="primary">
+              <mat-icon class="mat-18">edit</mat-icon>
+            </button>
+            <button mat-fab (click)="checkOff(task)" color="primary">
+              <mat-icon class="mat-18">done</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-list-item>
+    </mat-list>
+    <mat-list dense fxFlex="50">
+      <h3 mat-subheader>Done List</h3>
+      <mat-list-item *ngFor="let task of doneList" ngClass="{'strike-through':task.done}">
+        <div fxLayout="row">
+          <span class="me-auto">{{task.description}}</span>
+          <div class="buttons">
+            <button mat-fab (click)="deleteTask(task)" color="primary">
+              <mat-icon class="mat-18">delete</mat-icon>
+            </button>
+
+            <button mat-fab (click)="checkOff(task)" color="primary">
+              <mat-icon class="mat-18">done</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
