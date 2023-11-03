@@ -1,3 +1,9 @@
+/**
+ * Title: tasks.component.ts
+ * Author: Zahava Gopin
+ * Date: 11/2/23
+ */
+
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Task, TaskService } from 'src/app/task.service';

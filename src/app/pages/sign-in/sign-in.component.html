@@ -4,7 +4,7 @@
     <!-- input fr number and submit button-->
     <form style="padding-left: 15%; background-color: #f0c75e;" (submit)="doSignin($event)" [formGroup]="form"
       class="hi w-200">
-      <legend style="font-size: 100px; line-height: 100%; color: #726255;;">Plan to succeed, organize to achieve.
+      <legend style="font-size: 120px; line-height: 100%; color: #726255;;">you're one step away.
       </legend>
       <p style="font-size: 24px;">If you are a new user, create your account <a
           style="text-decoration: underline;">here</a>.</p>
@@ -22,7 +22,7 @@
         <mat-error *ngIf="form?.get('employeeId')?.hasError('employeeIdInvalid')">
           <br /> Please enter a valid employee ID. </mat-error>
       </mat-form-field>
-      <button style="font-size: 64px; color: white;" mat-button type="submit" class="signInButton">Sign In</button>
+      <button style="font-size: 40px; color: white;" mat-button type="submit" class="signInButton">sign in to view your tasks</button>
       <br />
 
     </form>
