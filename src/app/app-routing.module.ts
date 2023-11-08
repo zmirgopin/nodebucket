@@ -14,6 +14,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
 import { authGuardGuard } from './auth-guard.guard';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 // routes array with a path, component, and title for each route in the application (e.g. home, about, contact, etc.)
 const routes: Routes = [
@@ -26,6 +27,8 @@ const routes: Routes = [
         component: HomeComponent,
         title: 'Nodebucket: Home', // title for the home page
       },
+      { path: '404', component: NotFoundComponent },
+      { path: '**', redirectTo: '/404' },
       {
         path: 'home',
         component: HomeComponent,

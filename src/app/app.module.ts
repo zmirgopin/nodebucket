@@ -33,6 +33,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { TasksComponent } from './pages/tasks/tasks.component';
     TasksComponent,
     AboutComponent,
     ContactComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+.background-image {
+  background-image: url('/assets/404_image.jpg');
+  background-size: 100%; /* Adjust as needed */
+  background-position: center center; /* Adjust as needed */
+  background-repeat: no-repeat;
+}
+
+
+
+.container {
+  position: relative; /* Position relative for z-index to work */
+  text-align: center;
+  padding-top: 200px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+p{
+  font-size: 36px;
+}
