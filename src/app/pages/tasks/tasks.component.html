@@ -2,7 +2,7 @@
 
   <form class="addForm" fxFlex="100" (submit)="addTask(form.value)" [formGroup]="form" fxLayou="column">
 
-    <legend style="font-size: 120px; color: #726255; padding-bottom: 100px; padding-top: 120px;">Plan to succeed, organize to achieve.</legend>
+    <legend style="font-size: 100px; color: #726255; padding-bottom: 40px; line-height: 100px;">Plan to succeed, organize to achieve.</legend>
 
     <mat-form-field style="height: 120px; width: 300px">
       <mat-label>Task description</mat-label>
@@ -15,7 +15,7 @@
 
     <mat-list style="padding-top: 80px;"  dense fxFlex="50">
       <h3 mat-subheader>
-        <span style="font-size: 64px; color: #726255; text-decoration: underline;;">To do</span><button mat-icon-button (click)="refresh()">
+        <span style="font-size: 48px; color: #726255; text-decoration: underline;;">To do</span><button mat-icon-button (click)="refresh()">
           <mat-icon class="mat-18">refresh</mat-icon>
         </button>
       </h3>
