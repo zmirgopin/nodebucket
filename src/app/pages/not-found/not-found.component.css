@@ -1,4 +1,4 @@
-.background-image {
+.background-image-found {
   background-image: url('/assets/404_image.jpg');
   background-size: 100%; /* Adjust as needed */
   background-position: center center; /* Adjust as needed */
@@ -7,7 +7,7 @@
 
 
 
-.container {
+.container-found {
   position: relative; /* Position relative for z-index to work */
   text-align: center;
   padding-top: 200px;

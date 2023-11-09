@@ -28,7 +28,7 @@ const routes: Routes = [
         title: 'Nodebucket: Home', // title for the home page
       },
       { path: '404', component: NotFoundComponent },
-      { path: '**', redirectTo: '/404' },
+
       {
         path: 'home',
         component: HomeComponent,
