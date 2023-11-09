@@ -27,7 +27,6 @@ const routes: Routes = [
         component: HomeComponent,
         title: 'Nodebucket: Home', // title for the home page
       },
-      { path: '404', component: NotFoundComponent },
 
       {
         path: 'home',
@@ -56,6 +55,8 @@ const routes: Routes = [
         component: TasksComponent,
         title: 'Nodebucket: Tasks',
       },
+      { path: '404', component: NotFoundComponent },
+
     ],
   },
   {
